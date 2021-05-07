@@ -1,0 +1,52 @@
+태그의 사용법과 속성
+
+form태그의 속성
+action : form태그를 전송할 서버 쪽의 script 파일을 지정하는 태그
+method : 전송 방식을 선택하는 태그 
+          -get : 256~4096 byte까지만 전송가능
+          -post : 입력 내용의 길이 제한이 없다.
+enctype : 파일을 업로드 할때 사용하는 태그. 이 태그를 사용하지 않고 파일을 서버에 전송하면 경로명만 전송되고 파일은 전송되지 않음
+          사용시 method 속성값은 post로 지정해야함.
+name : form을 식별하기 위한 태그
+ex) <form name="profile" action="/action_page.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="homework" />
+    <button type="submit">제출</button>
+checkbox : 클릭하면 선택되고 다시 클릭하면 선택해제가 되는 사각형 모양의 상자
+           checked 속성을 적으면 화면이 로딩될 때 해당항목은 기본으로 선택된 채로 보여짐
+         ex)<input type="checkbox" name="color" value="red" checked>
+            <input type="checkbox" name='color' value="yellow"> 
+radio : 여러가지 항목중 하나만 선택가능한 동그란 버튼 checked 속성을 적으면 화면이 로딩될 때 해당항목은 기본으로 선택된 채로 보여짐
+        ex)<input type="radio" name="fruit" value="apple" checked>
+           <input type="radio" name="fruit" value="banana">
+</form>
+자식요소
+input : <input /> form태그의 요소중 하나. 사용자가 정보를 입력하는 부분을 만들어야 할 때 사용
+         type에 따라 어떤 형식으로 정보를 받을지 결정. id값을 통해 서로 구분
+         -text : <input type="text" />한 줄짜리 텍스트를 입력할 수 있는 상자
+         -hidden : <input type="hidden" />서버로 보내는 값들을 보내는 필드(사용자한테는 안보임)
+         -search : <input type="search" />검색상자
+         -password : <input type="password" />비밀번호 입력 필드
+         -file : <input type="file" />파일을 첨부할 수 있는 버튼
+         -button : <input type="button" />버튼
+         -submit : <input type="submit" />서버전송 버튼
+select option : <option selected> <select> 태그 안에 <option> 태그를 포함시키고, 선택할 값들을 <option> 태그 안에 지정
+                selected를 사용하면 기본값(default)으로 지정된다.
+               ex) <select>
+                       <option value="korean" selected>한국어</option>
+                       <option value="english">영어</option>
+                       <option value="spanish">스페인어</option>
+                       <option value="Japanese">일본어</option>
+                   </select>
+a : 하이퍼링크를 걸어주는 태그
+   ex)<a href="http://www.naver.com">NAVER</a>
+ul : unordered list의 약자로 순서가 필요없는 목록을 만들 때 사용. 글머리 기호가 앞에 붙음
+ol : ordered list의 약자로 순서가 있는 목록을 만들 때 사용. 번호가 앞에 붙음
+li : 항목들을 나열할 때 사용
+    ex) <ul>                  <ol>
+            <li>쇼핑</li>        <li>쇼핑</li>
+            <li>Pay</li>         <li>Pay</li>
+            <li>웹툰</li>        <li>웹툰</li>
+            <li>뉴스</li>        <li>뉴스</li>
+        </ul>                 </ol>
+        
+    
